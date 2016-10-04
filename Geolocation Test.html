@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type = "text/css">
+      #map-canvas {
+        height: 500px;
+      }
+    </style>
+
+    <title>Geolocation Test</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAWuo_ba9Kji4gamscuLyCY0i6rtNtKrGI"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWuo_ba9Kji4gamscuLyCY0i6rtNtKrGI&libraries=places">
+
+    <script type="text/javascript">
+
+      var map;
+
+      function initialize(userLocation) {
+
+        console.log(userLocation);
+
+      }
+
+      $(document).ready(function() {
+
+        navigator.geolocation.getCurrentPosition(initialize);
+
+      });
+
+    </script>
+
+
+  </head>
+  <body>
+
+    <div id = "map-canvas"></div>
+
+  </body>
+</html>
